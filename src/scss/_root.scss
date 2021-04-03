@@ -1,0 +1,32 @@
+@use "sass:color";
+
+:root {
+  --alpha-color:      #{$alpha-color};
+  --alpha-color-text: #{$alpha-color-text};
+  @each $name, $color in $colors {
+    --#{$name}-h:  #{color.hue($color)};
+    --#{$name}-s:  #{color.saturation($color)};
+    --#{$name}-l:  #{color.lightness($color)};
+  }
+}
+
+@each $name, $color in $colors {
+  .#{$name} {
+    --color-h:    var(--#{$name}-h);
+    --color-s:    var(--#{$name}-s);
+    --color-l:    var(--#{$name}-l);
+    --color-hsl: 
+      hsl(
+        var(--color-hue,        var(--#{$name}-h)),
+        var(--color-saturation, var(--#{$name}-s)),
+        var(--color-lightness,  var(--#{$name}-l))
+      );
+    --color-hsla: 
+      hsla(
+        var(--color-hue,        var(--#{$name}-h)),
+        var(--color-saturation, var(--#{$name}-s)),
+        var(--color-lightness,  var(--#{$name}-l)),
+        var(--color-alpha,      var(--alpha-color))
+      );
+  }
+}
