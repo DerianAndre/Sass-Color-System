@@ -46,7 +46,6 @@ With my color system:
     --color-lightness : 40%;
     --color-alpha     : 0.50;
   }
-
 ```
 
 The best thing is that we can do this for hue, saturation, lightness and alpha values to every single color.
