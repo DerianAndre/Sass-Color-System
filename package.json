@@ -1,11 +1,15 @@
 {
   "name": "sass-color-system",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple SASS color system",
   "main": "index.js",
+  "license": "ISC"
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "DerianAndre",
-  "license": "ISC"
+	"author": {
+		"name": "Derian Castillo",
+		"email": "hola@derianandre.com",
+		"url": "https://derianandre.com"
+	},
 }
